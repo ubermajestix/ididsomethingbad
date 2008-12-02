@@ -1,0 +1,23 @@
+<h1>New post</h1>
+
+<%= error_messages_for :post %>
+
+<% form_for(@post) do |f| %>
+  <p>
+    <b>Body</b><br />
+    <%= f.text_field :body %>
+  </p>
+
+  <p>
+    <%= f.check_box :anon %> <b>post anonymously?</b>
+  </p>
+
+  <p>
+    <%= f.check_box :nsfw %> <b>not safe for work</b>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', posts_path %>

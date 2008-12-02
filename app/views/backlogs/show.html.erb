@@ -1,0 +1,18 @@
+<p>
+  <b>User:</b>
+  <%=h @backlog.user_id %>
+</p>
+
+<p>
+  <b>Feature:</b>
+  <%=h @backlog.feature %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%=h @backlog.title %>
+</p>
+
+
+<%= link_to 'Edit', edit_backlog_path(@backlog) %> |
+<%= link_to 'Back', backlogs_path %>

@@ -1,0 +1,25 @@
+<h1>Listing backlogs</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Feature</th>
+    <th>Title</th>
+	<th colspan=3> actions </th>
+  </tr>
+
+<% for backlog in @backlogs %>
+  <tr>
+    <td><%=h backlog.user.login %></td>
+    <td><%=h backlog.feature %></td>
+    <td><%=h backlog.title %></td>
+    <td><%= link_to 'Show', backlog %></td>
+    <td><%= link_to 'Edit', edit_backlog_path(backlog) %></td>
+    <td><%= link_to 'Destroy', backlog, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New backlog', new_backlog_path %>

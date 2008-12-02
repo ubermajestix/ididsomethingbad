@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+pj_1:
+  body: i like boys
+  anon: false
+  nsfw: false
+  user: pj  
+
+pj_2:
+  body: i killed your mom, twice.
+  anon: true
+  nsfw: false
+  user: pj
+  
+tyler_1:
+  body: i ate all teh pie
+  anon: false
+  nsfw: true
+  user: tyler
+
+tyler_2:
+  body: i am the bumbleclot!
+  anon: true
+  nsfw: false
+  user: tyler

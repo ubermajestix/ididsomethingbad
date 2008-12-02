@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>ididsomethingbad.com : confess yourself</title>
+  <%= stylesheet_link_tag 'uber' %>
+  <%= javascript_include_tag :defaults %>
+</head>
+<body>
+	
+<div class="white_border uber">
+	<%if logged_in? %>
+		<%if current_user.admin %>
+			<%= render :partial => 'layouts/admin_nav' %>
+		<% else %>
+			<%= render :partial => 'layouts/user_nav' %>
+		<% end %>
+	<% end %>
+	
+	<%= yield  %>
+</div>
+<div id="footer" >
+	&copy; 2008 ididsomethingbad.com
+</div>
+</body>
+</html>

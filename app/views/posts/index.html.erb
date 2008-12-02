@@ -1,0 +1,27 @@
+<h1>Listing posts</h1>
+
+<table>
+  <tr>
+    <th>body</th>
+	<th>nsfw?</th>
+    <th>anon?</th>
+	<th> user </th>
+<th colspan=3> actions </th>
+  </tr>
+
+<% for post in @posts %>
+  <tr>
+    <td><%=h post.body %></td>
+    <td><%=h post.anon %></td>
+	<td><%= post.nsfw %></td>
+	<td> <%= post.user.login %> </td>
+    <td><%= link_to 'Show', post %></td>
+    <td><%= link_to 'Edit', edit_post_path(post) %></td>
+    <td><%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New post', new_post_path %>

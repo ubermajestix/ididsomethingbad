@@ -1,0 +1,22 @@
+<h1>Editing post</h1>
+
+<%= error_messages_for :post %>
+
+<% form_for(@post) do |f| %>
+  <p>
+    <b>Body</b><br />
+    <%= f.text_field :body %>
+  </p>
+
+  <p>
+    <b>Anon</b><br />
+    <%= f.check_box :anon %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @post %> |
+<%= link_to 'Back', posts_path %>

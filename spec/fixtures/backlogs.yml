@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user: pj
+  feature: TwitterPosting
+  title: Post to site by parsing twitter feed from twitter.com/didsomethingbad and line up to use
+
+two:
+  user: tyler
+  feature: Get Dan to do some CSS
+  title: jesus dan get on it already this site looks like shit.
