@@ -17,3 +17,12 @@ config.action_view.cache_template_loading            = true
 
 # Disable delivery errors, bad email addresses will be ignored
 # config.action_mailer.raise_delivery_errors = false
+
+# ActionMailer::Base.smtp_settings = {
+#   :address  => "smtp.postoffice.net",
+#   :port  => 25, 
+#   :domain  => "www.mywebsite.com",
+#   :user_name  => =="<a href="mailto:me@postoffice.net">me@postoffice.net</a>"==,
+#   :password  => "mypass",
+#   :authentication  => :login
+#     }

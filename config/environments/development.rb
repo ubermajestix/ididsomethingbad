@@ -16,3 +16,13 @@ config.action_view.cache_template_extensions         = false
 
 # Don't care if the mailer can't send
 config.action_mailer.raise_delivery_errors = false
+
+#  ActionMailer::Base.delivery_method = :sendmail
+# ActionMailer::Base.smtp_settings = {
+#   :address  => "smtp.postoffice.net",
+#   :port  => 25, 
+#   :domain  => "www.mywebsite.com",
+#   :user_name  => =="<a href="mailto:me@postoffice.net">me@postoffice.net</a>"==,
+#   :password  => "mypass",
+#   :authentication  => :login
+#     }

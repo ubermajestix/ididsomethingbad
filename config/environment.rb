@@ -36,15 +36,18 @@ Rails::Initializer.run do |config|
   # If you change this key, all old sessions will become invalid!
   # Make sure the secret is at least 30 characters and all random, 
   # no regular words or you'll be exposed to dictionary attacks.
+
+  require 'memcache'
   config.action_controller.session = {
     :session_key => '_ididsomethingbad_session',
-    :secret      => '8d364bcfef552e9cdaa608294ab69d2b4bda7efd9e550181065ef90eaa50e863baa42e8bcad0e5fee85897e95e7901c719398dc7453c95f6ddfa06a75afb172d'
+    :secret      => '8d364bcfef552e9cdaa608294ab69d2b4bda7efd9e550181065ef90eaa50e863baa42e8bcad0e5fee85897e95e7901c719398dc7453c95f6ddfa06a75afb172d',
+    :expires => 4*86400,
   }
 
   # Use the database for sessions instead of the cookie-based default,
   # which shouldn't be used to store highly confidential information
   # (create the session table with 'rake db:sessions:create')
-  # config.action_controller.session_store = :active_record_store
+  # config.action_controller.session_store = :memcache_store
 
   # Use SQL instead of Active Record's schema dumper when creating the test database.
   # This is necessary if your schema can't be completely dumped by the schema dumper,
