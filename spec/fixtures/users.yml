@@ -23,7 +23,7 @@ pj:
   remember_token_expires_at: 
   remember_token:            
   activation_code:           
-  activated_at:              <%= 5.days.ago.to_s :db %>
+  activated_at:              <%= 1.days.ago.to_s :db %>
   show_nsfw:                 true
   twitter_username:          hookedonwinter
   state:                     active

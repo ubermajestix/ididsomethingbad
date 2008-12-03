@@ -1,7 +1,10 @@
 <div class="nav">
+	<span style="float:right"><%= current_user.login %> | <%= link_to "logout", logout_path %></span>
+	
 <%= link_to "posts", posts_path %> | 
 <%= link_to "users", users_path %> | 
 <%= link_to "backlog", backlogs_path %> | 
 <%= link_to "new post", new_post_path %> |
-<%= link_to "logout", logout_path %>
+
+
 </div>
