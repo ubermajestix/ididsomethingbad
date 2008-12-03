@@ -38,6 +38,7 @@ Rails::Initializer.run do |config|
   # no regular words or you'll be exposed to dictionary attacks.
 
   require 'memcache'
+  config.action_controller.session_store = :mem_cache_store
   config.action_controller.session = {
     :session_key => '_ididsomethingbad_session',
     :secret      => '8d364bcfef552e9cdaa608294ab69d2b4bda7efd9e550181065ef90eaa50e863baa42e8bcad0e5fee85897e95e7901c719398dc7453c95f6ddfa06a75afb172d',
